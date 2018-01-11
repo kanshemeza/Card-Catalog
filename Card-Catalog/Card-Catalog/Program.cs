@@ -6,7 +6,7 @@ namespace Card_Catalog
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello Jim!");
+            Console.WriteLine("Hello Amon!");
         }
     }
 }
