@@ -22,7 +22,7 @@ namespace Card_Catalog
                 Console.WriteLine("Please select an option from the menu above: ");
                 menuOption = Convert.ToInt32(Console.ReadLine());
                 Console.ReadLine();
-                Test.ListBooks();
+                var books = Test.ListBooks();
                 
                 Test.AddBook();
                 Test.Save();

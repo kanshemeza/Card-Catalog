@@ -12,15 +12,17 @@ namespace Card_Catalog
 
         public Book()
         {
-            ISBN = "000";
+           // ISBN = "000";
         }
 
         public Book(string title, string author, string iSBN) : base()
         {
             Title = title;
             Author = author;
-            ISBN = iSBN;
+            iSBN = "000";
         }
+
+        
 
         //public override string ToString()
         //{
