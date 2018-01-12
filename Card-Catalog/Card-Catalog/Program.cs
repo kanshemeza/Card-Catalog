@@ -21,8 +21,11 @@ namespace Card_Catalog
                 Console.WriteLine("  [3] Save and Exit");
                 Console.WriteLine("Please select an option from the menu above: ");
                 menuOption = Convert.ToInt32(Console.ReadLine());
+                Console.ReadLine();
                 Test.ListBooks();
+                
                 Test.AddBook();
+                Test.Save();
 
 
             }

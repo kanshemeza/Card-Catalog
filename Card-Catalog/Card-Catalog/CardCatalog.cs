@@ -1,16 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.IO;
+using System.Xml.Serialization;
 
 namespace Card_Catalog
 {
     public class CardCatalog
     {
 
-        private string _filename { get; set; }
+        private string _filename;
         private List<Book> books = new List<Book>();      //This is the private member variable that contains all of the books
 
-
+        public string FileName { get; set; }
+        //public List<Book> book { get; set; }
         public CardCatalog(string fileName)
         {/*code goes here*/
             books.Add(new Book() { Author = "Amon", Title = "Learning C#", ISBN = "12345" });
@@ -43,9 +46,15 @@ namespace Card_Catalog
 
         }
 
-        //public ?? Save(??)
-        //{/*code goes here*/
-        //}
+        public void Save()
+        {
+            XmlSerializer serializer = new XmlSerializer(typeof(List<Book>));
+            using (TextWriter writer = new StreamWriter("test.xml"))
+            {
+                serializer.Serialize(writer, books);
+    }
+
+        }
 
     }
 }

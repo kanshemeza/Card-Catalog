@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfBook xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Book>
+    <Title>Learning C#</Title>
+    <Author>Amon</Author>
+    <ISBN>12345</ISBN>
+  </Book>
+  <Book>
+    <Title>Learning C#</Title>
+    <Author>Jim</Author>
+    <ISBN>67890</ISBN>
+  </Book>
+  <Book>
+    <Title>Teaching C#</Title>
+    <Author>Joe</Author>
+    <ISBN>246810</ISBN>
+  </Book>
+  <Book>
+    <Title>low</Title>
+    <Author>noma</Author>
+    <ISBN>452</ISBN>
+  </Book>
+  <Book>
+    <Title>test</Title>
+    <Author>test2</Author>
+    <ISBN>123456</ISBN>
+  </Book>
+</ArrayOfBook>
