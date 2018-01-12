@@ -1,0 +1,11 @@
+C:\Users\jgwoo\Documents\GitHub\Card-Catalog\Card-Catalog\Card-Catalog\obj\Debug\netcoreapp2.0\Card-Catalog.csprojResolveAssemblyReference.cache
+C:\Users\jgwoo\Documents\GitHub\Card-Catalog\Card-Catalog\Card-Catalog\obj\Debug\netcoreapp2.0\Card-Catalog.csproj.CoreCompileInputs.cache
+C:\Users\jgwoo\Documents\GitHub\Card-Catalog\Card-Catalog\Card-Catalog\obj\Debug\netcoreapp2.0\Card-Catalog.AssemblyInfoInputs.cache
+C:\Users\jgwoo\Documents\GitHub\Card-Catalog\Card-Catalog\Card-Catalog\obj\Debug\netcoreapp2.0\Card-Catalog.AssemblyInfo.cs
+C:\Users\jgwoo\Documents\GitHub\Card-Catalog\Card-Catalog\Card-Catalog\bin\Debug\netcoreapp2.0\Card-Catalog.deps.json
+C:\Users\jgwoo\Documents\GitHub\Card-Catalog\Card-Catalog\Card-Catalog\bin\Debug\netcoreapp2.0\Card-Catalog.runtimeconfig.json
+C:\Users\jgwoo\Documents\GitHub\Card-Catalog\Card-Catalog\Card-Catalog\bin\Debug\netcoreapp2.0\Card-Catalog.runtimeconfig.dev.json
+C:\Users\jgwoo\Documents\GitHub\Card-Catalog\Card-Catalog\Card-Catalog\bin\Debug\netcoreapp2.0\Card-Catalog.dll
+C:\Users\jgwoo\Documents\GitHub\Card-Catalog\Card-Catalog\Card-Catalog\bin\Debug\netcoreapp2.0\Card-Catalog.pdb
+C:\Users\jgwoo\Documents\GitHub\Card-Catalog\Card-Catalog\Card-Catalog\obj\Debug\netcoreapp2.0\Card-Catalog.dll
+C:\Users\jgwoo\Documents\GitHub\Card-Catalog\Card-Catalog\Card-Catalog\obj\Debug\netcoreapp2.0\Card-Catalog.pdb
