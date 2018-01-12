@@ -10,6 +10,7 @@ namespace Card_Catalog
             Console.WriteLine();
             Console.WriteLine("Please enter the filename for the card catalog: ");
             string filename = Console.ReadLine();
+            CardCatalog Test = new CardCatalog("woodowrth.xml");
             Console.WriteLine();
             int menuOption = 0;
             while (menuOption != 3)
@@ -20,6 +21,10 @@ namespace Card_Catalog
                 Console.WriteLine("  [3] Save and Exit");
                 Console.WriteLine("Please select an option from the menu above: ");
                 menuOption = Convert.ToInt32(Console.ReadLine());
+                Test.ListBooks();
+                Test.AddBook();
+
+
             }
  
         }
