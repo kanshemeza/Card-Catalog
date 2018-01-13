@@ -12,28 +12,38 @@ namespace Card_Catalog
         private string _filename;
         private List<Book> books = new List<Book>();      //This is the private member variable that contains all of the books
 
-        
+
+        public CardCatalog()
+        {
+        }
         public CardCatalog(string fileName)
         {/*code goes here*/
             _filename = fileName;
-
-            books.Add(new Book() { Author = "Amon", Title = "Learning C#", ISBN = "12345" });
-            books.Add(new Book() { Author = "Jim", Title = "Learning C#", ISBN = "67890" });
-            books.Add(new Book() { Author = "Joe", Title = "Teaching C#", ISBN = "246810" });
+            books = DeserializerMthd(_filename);
+            //test data to load into book generic collection
+            //books.Add(new Book() { Author = "Amon", Title = "Learning C#", ISBN = "12345" });
+            //books.Add(new Book() { Author = "Jim", Title = "Learning C#", ISBN = "67890" });
+            //books.Add(new Book() { Author = "Joe", Title = "Teaching C#", ISBN = "246810" });
         }
 
 
-        //Deserializing the "test.xml" file into the List<Book> object
-        public List<Book> ListBooks()
+        //method to list books in gneric collection
+        public void ListBooks()
         {
-            
-            XmlSerializer serializer = new XmlSerializer(typeof(List<Book>));
-            TextReader reader = new StreamReader("test.xml");
-            List<Book> books = null;
-            books = serializer.Deserialize(reader) as List<Book>;
-            return books;
-            
+            if (books.Count > 0)
+            {
+                foreach (Book abook in books)
+                {
+                    Console.WriteLine("Title:  {0} \t \t Author: {1} \t \t ISBN: {2}", abook.Title, abook.Author, abook.ISBN);
+                }
+            }
+            else
+            {
+                Console.WriteLine("No books in catalog");
+            }
         }
+
+
         public void AddBook()
         {/*code goes here*/
             Book temp = new Book();
@@ -47,21 +57,35 @@ namespace Card_Catalog
             Console.WriteLine("Please enter the ISBN of the book: ");
             temp.ISBN = Console.ReadLine();
             books.Add(temp);
-            ListBooks();
-
         }
 
         //Serializing the List<Book> collection into an XML file
         public void Save()
         {
             XmlSerializer serializer = new XmlSerializer(typeof(List<Book>));
-            using (TextWriter writer = new StreamWriter("test.xml"))
+            using (TextWriter writer = new StreamWriter(_filename))
             {
                 serializer.Serialize(writer, books);
-    }
-
+            }
         }
 
+        public List<Book> DeserializerMthd(string filename)
+        {
+            if(File.Exists(filename))
+            {
+                XmlSerializer deserializer = new XmlSerializer(typeof(List<Book>));
+                TextReader reader = new StreamReader(filename);
+                List<Book> books = null;
+                books = deserializer.Deserialize(reader) as List<Book>;
+                reader.Close();
+                return books;
+            }
+            else
+            {
+                return books;
+            }
+
+        }
     }
 }
 

@@ -25,4 +25,9 @@
     <Author>test2</Author>
     <ISBN>123456</ISBN>
   </Book>
+  <Book>
+    <Title>Test Book Five</Title>
+    <Author>Kali Woodworth</Author>
+    <ISBN>153957</ISBN>
+  </Book>
 </ArrayOfBook>

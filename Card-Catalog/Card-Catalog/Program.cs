@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.Xml.Serialization;
 
 namespace Card_Catalog
 {
@@ -10,9 +12,20 @@ namespace Card_Catalog
             Console.WriteLine();
             Console.WriteLine("Please enter the filename for the card catalog: ");
             string filename = Console.ReadLine();
-            CardCatalog Test = new CardCatalog("woodowrth.xml");
+
+            //test to see if file exists
+            if (!File.Exists(filename))
+            {
+                Console.WriteLine("File does not exist. Starting new catalog");
+            }
+
+            //create card catalog
+            CardCatalog CurrentCatalog = new CardCatalog(filename);
+                        
             Console.WriteLine();
             int menuOption = 0;
+
+            //while loop for menu listing
             while (menuOption != 3)
             {
                 Console.WriteLine("Main Menu: ");
@@ -20,13 +33,26 @@ namespace Card_Catalog
                 Console.WriteLine("  [2] Add A Book ");
                 Console.WriteLine("  [3] Save and Exit");
                 Console.WriteLine("Please select an option from the menu above: ");
+            
+                //Amon we might want to chnage this to a int.tryparse to keep progrma from blowing up
                 menuOption = Convert.ToInt32(Console.ReadLine());
-                Console.ReadLine();
-                var books = Test.ListBooks();
-                
-                Test.AddBook();
-                Test.Save();
 
+                if (menuOption == 1)
+                {
+                    CurrentCatalog.ListBooks();
+                }
+                else if (menuOption == 2)
+                {
+                    CurrentCatalog.AddBook();
+                }
+                else if (menuOption == 3)
+                {
+                    CurrentCatalog.Save();
+                    Console.WriteLine("{0} Saved", filename);
+                    Console.WriteLine("Please press enter to exit");
+                    Console.ReadLine();
+                    Environment.Exit(0);
+                }
 
             }
  
