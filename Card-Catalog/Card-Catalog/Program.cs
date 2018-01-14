@@ -33,9 +33,16 @@ namespace Card_Catalog
                 Console.WriteLine("  [2] Add A Book ");
                 Console.WriteLine("  [3] Save and Exit");
                 Console.WriteLine("Please select an option from the menu above: ");
-            
-                //Amon we might want to chnage this to a int.tryparse to keep progrma from blowing up
-                menuOption = Convert.ToInt32(Console.ReadLine());
+
+                //Amon we might want to change this to a int.tryparse to keep progrma from blowing up              
+                string userSelection = Console.ReadLine();
+                int selected;
+                bool result = true;
+                result = int.TryParse(userSelection, out selected);
+                if (result)
+                {
+                    menuOption = selected;
+                }
 
                 if (menuOption == 1)
                 {
